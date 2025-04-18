@@ -1,3 +1,4 @@
+/* header */
 .body{
     display: flex;
     flex-direction: row;
@@ -15,10 +16,37 @@
     height: 10rem,;
     border-radius: 10rem;
 }
+
 .body__header__nav__lista{
     list-style: none;
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 0;
+    padding: 0rem;;
+    margin-top: 4rem;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+
+.body__header__nav__lista li{
+    margin-bottom: 3rem;
+}
+
+.body__header__nav__lista a{
+    text-decoration: none;
+    color: black;
+}
+.body__main__texto{
+    display: flex;
+    flex-direction: column;
+}
+.body__main__texto__principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body__main__texto__principal--btn--img{
+    width: 1rem;
+    height: 1rem,;
 }
