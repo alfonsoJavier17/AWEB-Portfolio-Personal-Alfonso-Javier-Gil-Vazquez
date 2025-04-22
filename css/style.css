@@ -2,6 +2,8 @@
 .body{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: 100%;
 }
 
 .body__header{
@@ -88,4 +90,20 @@
 
 .body__main__sec{
     margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+}
+.body__main__sec--title{
+    font-size: 1.5rem;
+}
+
+/* Contacto */
+.body__main__texto__secundario
+
+
+
+
+.body__main__formas--telefono--logo {
+   width: 2rem;
+   height: 2rem;
 }
