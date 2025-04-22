@@ -2,8 +2,8 @@
 .body{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
 }
+
 .body__header{
     display: flex;
     flex-direction: column;
@@ -37,6 +37,17 @@
     text-decoration: none;
     color: black;
 }
+
+/* MAIN */
+
+.body__main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .body__main__texto{
     display: flex;
     flex-direction: column;
@@ -49,4 +60,28 @@
 .body__main__texto__principal--btn--img{
     width: 1rem;
     height: 1rem,;
+}
+
+.body__main__texto__secundario{
+    display: flex;
+    justify-content: space-around;
+}
+
+.body__main__texto__secundario--texto--h2{
+    margin-top: 3rem;
+}
+
+.body__main__texto__secundario--texto--descripcion{
+    margin-top: 2rem;
+}
+
+.body__main__texto__secundario__img--yo{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10rem;
+}
+
+/* about */
+.body__main__sec{
+    margin-top: 5rem;
 }
