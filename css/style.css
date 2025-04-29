@@ -6,6 +6,11 @@
 
 :root{
     --colorFondo:green;
+    --h1:4rem;
+    --h2:2.5rem;
+    --h3:1.8rem;
+    --texto:1.3rem;
+    
 }
 
 /* header */
@@ -25,6 +30,18 @@
     justify-content: center;
 }
 
+.body__header__figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}	
+
+.body__header__figure--luna{
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+}
+
 .body__header__figure--img{
     width: 10rem;
     height: 10rem,;
@@ -38,7 +55,7 @@
     width: 100%;
     padding: 0rem;;
     margin-top: 4rem;
-    font-size: 2rem;
+    font-size: var(--h2);
     margin-bottom: 4rem;
 }
 
@@ -72,51 +89,67 @@
 }
 
 .body__main__texto__principal--h1{
-    font-size: 3.5rem;
+    font-size: var(--h1);
     margin-bottom: 4rem;
-}
-
-.body__main__texto__principal--btn--img{
-    width: 1rem;
-    height: 1rem,;
-}
-
-.body__main__texto__secundario{
     display: flex;
 }
 
+.body__main__texto__secundario{
+    display:flex;
+    margin-bottom: 3rem;
+}
+
+.secundario__header{
+    display: flex;
+    justify-content: center;
+}
+
 .body__main__texto__secundario--texto--h2{
-    margin-top: 1.8rem;
+    font-size: var(--h2);
 }
 
 .body__main__texto__secundario--texto--descripcion{
     margin-top: 2rem;
+    font-size: var(--texto);
 }
 
 .body__main__texto__secundario__img--yo{
     width: 20rem;
     height: 20rem;
     border-radius: 10rem;
+    margin-left: 3rem;
 }
 
 /* about */
 
 .body__main__sec{
-    margin-top: 5rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.body__main__tabla{
     display: flex;
     justify-content: center;
 }
+
 .body__main__sec--title{
-    font-size: 1.5rem;
+    font-size: var(--h3);
+}
+
+.tabla__elementos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: var(--texto);
+}
+
+.tabla__elementos--D{
+    margin-left: 10rem;
 }
 
 /* Contacto */
-
-.body__main__texto__secundario{
-    display:flex;
-    justify-content: center;
-    margin-bottom: 3rem;
-}
 
 .body__main__formas{
     display: flex;
@@ -143,4 +176,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.body__main__contactar__texto--h2{
+    font-size: var(--h2);
+    margin-bottom: 2rem;
+}
+
+.body__main__contactar__texto--h3{
+    font-size: var(--h3);
+    margin-bottom: 2rem;
+}
+
+.body__main__contactar__inputs--asunto--txt{
+    width: 100%;
+    margin-top: 0.1rem;
+}
+
+.body__main__contactar__inputs--mensaje--txt{
+    width: 100%;
+    margin-top: 0.1rem;
 }
