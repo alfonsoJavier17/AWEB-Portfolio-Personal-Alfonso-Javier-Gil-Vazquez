@@ -10,7 +10,7 @@
     --h2:2.5rem;
     --h3:1.8rem;
     --texto:1.3rem;
-    
+    --top:3rem;
 }
 
 /* header */
@@ -123,7 +123,7 @@
 /* about */
 
 .body__main__sec{
-    margin-top: 3rem;
+    margin-top: var(--top);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -147,6 +147,25 @@
 
 .tabla__elementos--D{
     margin-left: 10rem;
+}
+
+.body__main__datos{
+    display: flex;
+    justify-content: space-around;
+    margin-top: var(--top);
+}
+
+.tabla__academy__title{
+    font-size: var(--h3);
+}
+
+.datos__elementos{
+    font-size: var(--texto);
+}
+
+.banderas{
+    width: 4rem;
+    height: 2rem;
 }
 
 /* Contacto */
