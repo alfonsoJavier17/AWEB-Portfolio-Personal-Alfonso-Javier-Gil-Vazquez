@@ -23,6 +23,7 @@
     width: 100vw;
     height: 100vh;
     font-family: "Montserrat", serif;
+    color : black;
 }
 
 .body__header{
@@ -126,7 +127,7 @@
 
 .body__main__texto__secundario--texto--Más{
     text-decoration: none;
-    color: black;
+    color: rgb(20, 223, 206);
     font-size: var(--texto);
 }
 
@@ -198,6 +199,7 @@
     width: 7rem;
     height: auto;
     display: flex;
+    margin-bottom: 1rem;
 } 
 
 .simbolos{
@@ -232,4 +234,17 @@
 .body__main__contactar__inputs--mensaje--txt{
     width: 100%;
     margin-top: 0.1rem;
+}
+
+/* Portfolio */
+
+.body__main__fotos{
+    display: flex;
+    justify-content: center;
+}
+
+.body__header__figure--1{
+    height: 30rem;
+    width: auto;
+    border-radius: 10rem;
 }

@@ -9,6 +9,7 @@ const boton = document.querySelector(".body__header__figure__btn");
 const header = document.querySelector (".body__header");
 const main = document.querySelector (".body__main");
 const body = document.querySelector (".body");
+const mas = document.querySelector (".body__main__texto__secundario--texto--Más")
 
 //funcion del boton
 
@@ -24,6 +25,6 @@ boton.addEventListener("click", function(){
         header.style.backgroundColor = color_header[0];
         main.style.backgroundColor = color_main[0];
         body.style.color = "black";
-        i = 0; 
+        i = 0;
     }
 });
