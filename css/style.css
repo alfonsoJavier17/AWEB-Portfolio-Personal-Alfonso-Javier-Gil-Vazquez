@@ -209,6 +209,11 @@
     align-items: center;
 }
 
+#enlace{
+    text-decoration: none;
+    color: black;
+}
+
 .body__main__contactar{
     margin-top: 4rem;
     display: flex;
