@@ -41,7 +41,7 @@
 }	
 
 .body__header__figure__btn{
-    margin-bottom: 2rem;
+    margin:2rem;
 }
 
 .body__header__figure__btn--luna{
@@ -120,6 +120,13 @@
 
 .body__main__texto__secundario--texto--descripcion{
     margin-top: 2rem;
+    font-size: var(--texto);
+}
+/* Home */
+
+.body__main__texto__secundario--texto--Más{
+    text-decoration: none;
+    color: black;
     font-size: var(--texto);
 }
 
