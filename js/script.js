@@ -15,9 +15,9 @@ const img = document.querySelector (".body__header__figure__btn--luna")
 const paginas = document.querySelectorAll(".paginas")
 
 
-const carrusel = document.querySelector(".carrusel")
-const btn_izq = document.querySelector("body__main__proyectos__btn__izq")
-const btn_drc = document.querySelector("body__main__proyectos__btn__der")
+const carrusel = document.querySelector(".body__header__proyectos__figure--1")
+const btn_izq = document.querySelector(".body__main__proyectos__btn__izq")
+const btn_drc = document.querySelector(".body__main__proyectos__btn__der")
 
 //funcion del boton de modos (modo claro a oscuro y al reves)
 
@@ -57,7 +57,17 @@ boton.addEventListener("click", function(){
 
 //Funcion del carrusel
 
-let e=0
-btn_izq.addEventListener("Click", function (){
-    
-})
+let e=0;
+console.log(btn_drc);
+btn_drc.addEventListener("click", function (){
+    if(e==0){
+        carrusel.src="../projects/color-flipper.png"
+        e=e+1
+    }else if(e==1){
+        carrusel.src="../projects/caja.png"
+        e=e+1
+    }else if(e==2){
+        carrusel.src="../projects/frases-random.png"
+        e=e+1
+    }
+});
