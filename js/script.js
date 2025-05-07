@@ -10,7 +10,7 @@ const header = document.querySelector (".body__header");
 const main = document.querySelector (".body__main");
 const body = document.querySelector (".body");
 const mas = document.querySelector (".body__main__texto__secundario--texto--Más")
-const enlace = document.querySelector ("#enlace")
+const enlace = document.querySelector (".enlace")
 const img = document.querySelector (".body__header__figure__btn--luna")
 const paginas = document.querySelectorAll(".paginas")
 
@@ -18,6 +18,12 @@ const paginas = document.querySelectorAll(".paginas")
 const carrusel = document.querySelector(".body__header__proyectos__figure--1")
 const btn_izq = document.querySelector(".body__main__proyectos__btn__izq")
 const btn_drc = document.querySelector(".body__main__proyectos__btn__der")
+const pt_1 = document.querySelector(".body__main__proyectos__btn__puntos--1")
+const pt_2 = document.querySelector(".body__main__proyectos__btn__puntos--2")
+const pt_3 = document.querySelector(".body__main__proyectos__btn__puntos--3")
+const pt_4 = document.querySelector(".body__main__proyectos__btn__puntos--4")
+const pt_5 = document.querySelector(".body__main__proyectos__btn__puntos--5")
+const pt_6 = document.querySelector(".body__main__proyectos__btn__puntos--6")
 
 //funcion del boton de modos (modo claro a oscuro y al reves)
 
@@ -58,16 +64,61 @@ boton.addEventListener("click", function(){
 //Funcion del carrusel
 
 let e=0;
-console.log(btn_drc);
+
 btn_drc.addEventListener("click", function (){
     if(e==0){
         carrusel.src="../projects/color-flipper.png"
+        pt_1.style.width="1rem"
+        pt_2.style.width="1.5rem"
         e=e+1
     }else if(e==1){
         carrusel.src="../projects/caja.png"
+        pt_2.style.width="1rem"
+        pt_3.style.width="1.5rem"
         e=e+1
     }else if(e==2){
         carrusel.src="../projects/frases-random.png"
+        pt_3.style.width="1rem"
+        pt_4.style.width="1.5rem"
         e=e+1
+    }else if(e==3){
+        carrusel.src="../projects/lista-tareas.png"
+        pt_4.style.width="1rem"
+        pt_5.style.width="1.5rem"
+        e=e+1
+    }else if(e==4){
+        carrusel.src="../projects/tareas-random.png"
+        pt_5.style.width="1rem"
+        pt_6.style.width="1.5rem"
+        e=e+1
+    }
+});
+
+btn_izq.addEventListener("click", function (){
+    if(e==1){
+        carrusel.src="../assets/Proyectos.png"
+        pt_1.style.width="1.5rem"
+        pt_2.style.width="1rem"
+        e=e-1
+    }else if(e==2){
+        carrusel.src="../projects/color-flipper.png"
+        pt_2.style.width="1.5rem"
+        pt_3.style.width="1rem"
+        e=e-1
+    }else if(e==3){
+        carrusel.src="../projects/caja.png"
+        pt_3.style.width="1.5rem"
+        pt_4.style.width="1rem"
+        e=e-1
+    }else if(e==4){
+        carrusel.src="../projects/frases-random.png"
+        pt_4.style.width="1.5rem"
+        pt_5.style.width="1rem"
+        e=e-1
+    }else if(e==5){
+        carrusel.src="../projects/lista-tareas.png"
+        pt_5.style.width="1.5rem"
+        pt_6.style.width="1rem"
+        e=e-1
     }
 });

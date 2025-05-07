@@ -209,7 +209,7 @@
     align-items: center;
 }
 
-#enlace{
+.enlace{
     text-decoration: none;
     color: black;
 }
@@ -258,6 +258,41 @@
 .body__main__proyectos__btn{
     display: flex;
     justify-content: center;
-    justify-content: space-evenly;
     margin-top: 2rem;
+}
+
+.body__main__proyectos__btn__puntos{
+    display: flex;
+    align-items: center;
+    width: 23%;
+    justify-content: space-evenly;
+}
+
+.body__main__proyectos__btn__puntos--1{
+    width: 1.5rem;
+}
+
+.body__main__proyectos__btn__puntos--2{
+    width: 1rem;
+}
+
+.body__main__proyectos__btn__puntos--3{
+    width: 1rem;
+}
+
+.body__main__proyectos__btn__puntos--4{
+    width: 1rem;
+}
+
+.body__main__proyectos__btn__puntos--5{
+    width: 1rem;
+}
+
+.body__main__proyectos__btn__puntos--6{
+    width: 1rem;
+}
+
+.puntos{
+    display: flex;
+    justify-content: center;
 }
