@@ -68,11 +68,11 @@
 }
 
 
-.body__header__nav__lista li{
+.lista{
     margin-bottom: 3rem;
 }
 
-.body__header__nav__lista a{
+.paginas{
     text-decoration: none;
     color: black;
 }
@@ -122,6 +122,7 @@
 .body__main__texto__secundario--texto--descripcion{
     margin-top: 2rem;
     font-size: var(--texto);
+    margin-bottom: 4rem;
 }
 /* Home */
 
@@ -141,7 +142,6 @@
 /* about */
 
 .body__main__sec{
-    margin-top: var(--top);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -239,6 +239,7 @@
 .body__main__contactar__inputs--mensaje--txt{
     width: 100%;
     margin-top: 0.1rem;
+    height: 10vh; 
 }
 
 /* Portfolio */
