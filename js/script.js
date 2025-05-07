@@ -59,5 +59,5 @@ boton.addEventListener("click", function(){
 
 let e=0
 btn_izq.addEventListener("Click", function (){
-    for(e;e)
+    
 })
