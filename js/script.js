@@ -12,7 +12,7 @@ const header = document.querySelector (".body__header");
 const main = document.querySelector (".body__main");
 const body = document.querySelector (".body");
 const mas = document.querySelector (".body__main__texto__secundario--texto--Más")
-const enlace = document.querySelector (".enlace")
+const enlace = document.querySelectorAll(".enlace")
 const img = document.querySelector (".body__header__figure__btn--luna")
 const paginas = document.querySelectorAll(".paginas")
 
@@ -21,17 +21,18 @@ const paginas = document.querySelectorAll(".paginas")
 const carrusel = document.querySelector(".body__header__proyectos__figure--1")
 const btn_izq = document.querySelector(".body__main__proyectos__btn__izq")
 const btn_drc = document.querySelector(".body__main__proyectos__btn__der")
-const pt_1 = document.querySelector(".body__main__proyectos__btn__puntos--1")
-const pt_2 = document.querySelector(".body__main__proyectos__btn__puntos--2")
-const pt_3 = document.querySelector(".body__main__proyectos__btn__puntos--3")
-const pt_4 = document.querySelector(".body__main__proyectos__btn__puntos--4")
-const pt_5 = document.querySelector(".body__main__proyectos__btn__puntos--5")
-const pt_6 = document.querySelector(".body__main__proyectos__btn__puntos--6")
+// const pt_1 = document.querySelector(".body__main__proyectos__btn__puntos--1")
+// const pt_2 = document.querySelector(".body__main__proyectos__btn__puntos--2")
+// const pt_3 = document.querySelector(".body__main__proyectos__btn__puntos--3")
+// const pt_4 = document.querySelector(".body__main__proyectos__btn__puntos--4")
+// const pt_5 = document.querySelector(".body__main__proyectos__btn__puntos--5")
+// const pt_6 = document.querySelector(".body__main__proyectos__btn__puntos--6")
 
 //variables del carrusel nuevo
 
 const images = ["../assets/Proyectos.png", "../projects/color-flipper.png", "../projects/caja.png", "../projects/frases-random.png", "../projects/lista-tareas.png", "../projects/tareas-random.png"];
-const points = [pt_1, pt_2, pt_3, pt_4, pt_5, pt_6];
+const points = document.querySelectorAll(".puntos");
+console.log(points);
 
 //fin variables
 
@@ -43,37 +44,61 @@ const points = [pt_1, pt_2, pt_3, pt_4, pt_5, pt_6];
 
 let i=0;
 
-boton.addEventListener("click", function(){    
-    if (i == 0) {
-        header.style.backgroundColor = color_header[1];
-        main.style.backgroundColor = color_main[1];
-        body.style.color = "white";
-        img.src="/assets/sun_9055356.png";
-        img.style.backgroundColor=color_header[1];
-        boton.style.backgroundColor=color_header[1];
-        paginas.forEach(pagina => {
-            pagina.style.color="white"
-        });
-        if(enlace){
-            enlace.style.color ="white";
-        }
-        i = 1;
-    } else {
-        header.style.backgroundColor = color_header[0];
-        main.style.backgroundColor = color_main[0];
-        body.style.color = "black";
-        img.src="/assets/luna.png"
-        img.style.backgroundColor=color_header[0];
-        boton.style.backgroundColor=color_header[0];
-        paginas.forEach(pagina => {
-            pagina.style.color="black"
-        });
-        if(enlace){
-            enlace.style.color ="black";
-        }
-        i = 0;
+// boton.addEventListener("click", function(){    
+//     if (i == 0) {
+//         header.style.backgroundColor = color_header[1];
+//         main.style.backgroundColor = color_main[1];
+//         body.style.color = "white";
+//         img.src="/assets/sun_9055356.png";
+//         img.style.backgroundColor=color_header[1];
+//         boton.style.backgroundColor=color_header[1];
+//         paginas.forEach(pagina => {
+//             pagina.style.color="white"
+//         });
+//         if(enlace){
+//             enlace.style.color ="white";
+//         }
+//         i = 1;
+//     } else {
+//         header.style.backgroundColor = color_header[0];
+//         main.style.backgroundColor = color_main[0];
+//         body.style.color = "black";
+//         img.src="/assets/luna.png"
+//         img.style.backgroundColor=color_header[0];
+//         boton.style.backgroundColor=color_header[0];
+//         paginas.forEach(pagina => {
+//             pagina.style.color="black"
+//         });
+//         if(enlace){
+//             enlace.style.color ="black";
+//         }
+//         i = 0;
+//     }
+// });
+
+boton.addEventListener("click", function(){ 
+
+    header.classList.toggle("darkmode--header");
+    main.classList.toggle("darkmode--main");
+    main.classList.toggle("darkmode--letras")
+    img.classList.toggle("darkmode--header");
+    // img.classList.toggle("darkmode--btn");
+    boton.classList.toggle("darkmode--header");
+    paginas.forEach(pagina => {
+                    pagina.classList.toggle("darkmode--letras")
+    });
+    if(enlace){
+        enlace.forEach(enl =>{
+            enl.classList.toggle("darkmode--letras");
+        })
+
+    if(img.src=="/assets/sun_9055356.png"){
+        img.src = "/assets/luna.png";
+    }else{
+        img.src="/assets/sun_9055356.png"
     }
-});
+    }
+})
 
 //Funcion del carrusel antigua
 
@@ -188,5 +213,8 @@ function Car_izq() {
     act_Carrusel();
 }
 
-btn_drc.addEventListener("click", Car_drc);
-btn_izq.addEventListener("click", Car_izq);
+if(points){
+    console.log("entra");
+    btn_drc.addEventListener("click", Car_drc);
+    btn_izq.addEventListener("click", Car_izq);
+}
