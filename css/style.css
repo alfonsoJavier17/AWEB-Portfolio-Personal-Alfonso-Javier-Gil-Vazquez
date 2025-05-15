@@ -23,16 +23,21 @@
     width: 100vw;
     height: 100vh;
     font-family: "Montserrat", serif;
-    color : black;
 }
 
 .body__header{
+    min-width: 12.5rem;
     width: 16%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgb(233, 228, 228);
+}
+
+.body__header__nav{
+    width: 100%;
+    text-align: center;
 }
 
 .body__header__figure{
@@ -86,6 +91,7 @@
     justify-content: center;
     background-color: rgb(219, 212, 212);
     padding-left: 2rem;
+    color : black;
 }
 
 .body__main__texto{
@@ -243,22 +249,32 @@
 }
 
 /* Portfolio */
+.body__main__proyectos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .body__main__proyectos__fotos{
     display: flex;
     justify-content: center;
+    width: 80%;
 }
 
 .body__header__proyectos__figure--1{
     height: 30rem;
-    width: auto;
-    border-radius: 8rem;
+    width: 75%;
+    border-radius: 1.5rem;
 }
+
+
 
 .body__main__proyectos__btn{
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+    width: 100%;
 }
 
 .body__main__proyectos__btn__puntos{
@@ -295,4 +311,20 @@
 .puntos{
     display: flex;
     justify-content: center;
+}
+
+
+/* Clases del darkmode */
+
+
+.darkmode--header{
+    background-color: rgb(59, 57, 57);
+}
+
+.darkmode--main{
+    background-color:rgb(22, 20, 20) ;
+}
+
+.darkmode--letras{
+    color:white;
 }
