@@ -27,7 +27,6 @@ const points = document.querySelectorAll(".puntos");
 
 //funcion del boton de modos (modo claro a oscuro y al reves)
 
-let i=0;
 
 boton.addEventListener("click", function(){ 
 
@@ -40,27 +39,28 @@ boton.addEventListener("click", function(){
     paginas.forEach(pagina => {
         pagina.classList.toggle("darkmode--letras")
     });
+
     if(enlace){
         enlace.forEach(enl =>{
             enl.classList.toggle("darkmode--letras");
-        })
+        });
 
-    if(img.src=="/assets/luna.png"){
+    if(img.src.includes("/assets/luna.png")){
         img.src = "/assets/sun_9055356.png";
     }else{
-        img.src="/assets/sun_9055356.png"
+        img.src="/assets/luna.png"
     }
     }
 });
 
 //Funcion del carrusel nueva
 
-let j = 0;
+let i = 0;
 
 function act_Carrusel() {
-    carrusel.src = images[j];
+    carrusel.src = images[i];
     points.forEach((point,indicador) => {
-       if (indicador == j) {
+       if (indicador == i) {
             point.style.width = "1.5rem";
         }
         else {
@@ -70,17 +70,17 @@ function act_Carrusel() {
 }
 
 function Car_drc() {
-    j = j + 1;
-    if (j >= images.length) {
-        j = 0;
+    i = i + 1;
+    if (i >= images.length) {
+        i = 0;
     }
     act_Carrusel();
 }
 
 function Car_izq() {
-    j = j - 1;
-    if (j < 0) {
-    j = images.length - 1;
+    i = i - 1;
+    if (i < 0) {
+    i = images.length - 1;
     }
     act_Carrusel();
 }
