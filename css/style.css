@@ -268,8 +268,6 @@
     border-radius: 1.5rem;
 }
 
-
-
 .body__main__proyectos__btn{
     display: flex;
     justify-content: center;
@@ -313,6 +311,14 @@
     justify-content: center;
 }
 
+.body__main__proyectos__ver{
+    margin-top: 1rem;
+}
+
+.body__main__proyectos__ver--enl{
+    text-decoration: none;
+    color: rgb(0, 183, 255);
+}
 
 /* Clases del darkmode */
 

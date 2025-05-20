@@ -11,19 +11,19 @@ const enlace = document.querySelectorAll (".enlace")
 const img = document.querySelector (".body__header__figure__btn--luna")
 const paginas = document.querySelectorAll(".paginas")
 
-//variables del carrusel antiguo
+//variables del carrusel 
 
 const carrusel = document.querySelector(".body__header__proyectos__figure--1")
 const btn_izq = document.querySelector(".body__main__proyectos__btn__izq")
 const btn_drc = document.querySelector(".body__main__proyectos__btn__der")
 const images = ["../assets/Proyectos.png", "../projects/color-flipper.png", "../projects/caja.png", "../projects/frases-random.png", "../projects/lista-tareas.png", "../projects/tareas-random.png"];
 const points = document.querySelectorAll(".puntos");
+const enl_proy = document.querySelector(".body__main__proyectos__ver--enl")
+const proyectos = ["","../projects/color-flipper/index.html","../projects/proyecto_2/index.html","../projects/proyecto_3/index.html","../projects/proyecto_4/index.html","../projects/proyecto_5/index.html"]
 
 //fin variables
 
 //funciones
-
-//funcion modo oscuro y claro
 
 //funcion del boton de modos (modo claro a oscuro y al reves)
 
@@ -34,7 +34,6 @@ boton.addEventListener("click", function(){
     main.classList.toggle("darkmode--main");
     main.classList.toggle("darkmode--letras")
     img.classList.toggle("darkmode--header");
-    // img.classList.toggle("darkmode--btn");
     boton.classList.toggle("darkmode--header");
     paginas.forEach(pagina => {
         pagina.classList.toggle("darkmode--letras")
@@ -53,12 +52,13 @@ boton.addEventListener("click", function(){
     }
 });
 
-//Funcion del carrusel nueva
+//Funcion del carrusel 
 
 let i = 0;
 
 function act_Carrusel() {
     carrusel.src = images[i];
+    enl_proy.href = proyectos[i]
     points.forEach((point,indicador) => {
        if (indicador == i) {
             point.style.width = "1.5rem";
