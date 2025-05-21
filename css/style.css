@@ -318,6 +318,7 @@
 .body__main__proyectos__ver--enl{
     text-decoration: none;
     color: rgb(0, 183, 255);
+    display: none;
 }
 
 /* Clases del darkmode */

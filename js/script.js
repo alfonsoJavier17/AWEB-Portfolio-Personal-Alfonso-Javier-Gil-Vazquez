@@ -23,6 +23,7 @@ const proyectos = ["","../projects/color-flipper/index.html","../projects/proyec
 
 //fin variables
 
+
 //funciones
 
 //funcion del boton de modos (modo claro a oscuro y al reves)
@@ -30,19 +31,28 @@ const proyectos = ["","../projects/color-flipper/index.html","../projects/proyec
 
 boton.addEventListener("click", function(){ 
 
+    //cambiar colores
+
     header.classList.toggle("darkmode--header");
     main.classList.toggle("darkmode--main");
     main.classList.toggle("darkmode--letras")
     img.classList.toggle("darkmode--header");
     boton.classList.toggle("darkmode--header");
+
+    //para colorear todos
+
     paginas.forEach(pagina => {
         pagina.classList.toggle("darkmode--letras")
     });
+
+    //si esta enlace que lo pinte
 
     if(enlace){
         enlace.forEach(enl =>{
             enl.classList.toggle("darkmode--letras");
         });
+
+    //Cambiar la luna por el sol y bicebersa
 
     if(img.src.includes("/assets/luna.png")){
         img.src = "/assets/sun_9055356.png";
@@ -52,13 +62,30 @@ boton.addEventListener("click", function(){
     }
 });
 
+
 //Funcion del carrusel 
 
 let i = 0;
 
 function act_Carrusel() {
+
+    //cambiar las imgs
+
     carrusel.src = images[i];
+
+    //cambiar enlace
+
     enl_proy.href = proyectos[i]
+
+    //para que aparezca y desapazerca el enlace a los proyectos
+    if(i==0){
+        enl_proy.style.display="none";
+    }else{
+        enl_proy.style.display="block";
+    }
+
+    //bucle para ir cambiando el tamaño de los puntos
+
     points.forEach((point,indicador) => {
        if (indicador == i) {
             point.style.width = "1.5rem";
@@ -69,6 +96,9 @@ function act_Carrusel() {
     });
 }
 
+
+//Funcion para sumar (derecha)
+
 function Car_drc() {
     i = i + 1;
     if (i >= images.length) {
@@ -77,6 +107,9 @@ function Car_drc() {
     act_Carrusel();
 }
 
+
+//Funcion para restar (izquierda)
+
 function Car_izq() {
     i = i - 1;
     if (i < 0) {
@@ -84,6 +117,9 @@ function Car_izq() {
     }
     act_Carrusel();
 }
+
+
+//Llamar funciones
 
 btn_drc.addEventListener("click", Car_drc);
 btn_izq.addEventListener("click", Car_izq);
