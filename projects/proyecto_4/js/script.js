@@ -4,8 +4,8 @@ const lista = document.querySelector(".main__lista")
 const array = []
 
 
-function addTask(event) {
-    event.preventDefault();
+function addTask() {
+
     const tarea = texto.value;
 
     if (tarea != "") {
